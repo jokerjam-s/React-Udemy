@@ -25,9 +25,14 @@ function App() {
         },
     ]
 
+    const addCostHandler = (cost) => {
+        console.log(cost);
+        console.log("App component");
+    }
+
     return (
         <div>
-            <NewCost/>
+            <NewCost onAddCost={addCostHandler}/>
             <Costs costs={costs} />
         </div>
     );
